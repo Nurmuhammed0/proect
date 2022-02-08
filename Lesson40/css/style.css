@@ -1,0 +1,30 @@
+.container-fluid{
+  font-size: 40px;
+  background-color: black;
+  color: gray;
+}
+.d{
+  font-size: 45px;
+  color: #fff;
+}
+.btn{
+  font-size: 40px;
+  color: gray;
+}
+.div{
+  margin-right: 10px;
+}
+.div1{
+  font-size: 40px;
+  color: #fff;
+}
+.span{
+
+  width: 30%;
+}
+.ff{
+  width: 20%;
+}
+.nn{
+  margin-top: 100px;
+}

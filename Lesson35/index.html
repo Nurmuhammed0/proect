@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+  <!-- <input type="text"> -->
+  <div id="div2" class="kub"></div>
+  <script type="text/javascript">
+    let div = document.getElementById('div2')
+    // let body_ = document.body;
+    // body_.onkeyup = (e) => {
+    // console.log(e.keyCode)  
+    // }
+
+
+
+    // let body_ = document.body;
+    //   let a = 50;
+    //   let b = 50;
+
+    // body_.onkeydown = (e) => {
+    
+    // if(e.keyCode == 38){ 
+    //   a -= 2;
+    //   div.style.top = `${a}%`
+    // }
+    // if(e.keyCode == 40){
+    //   a += 2;
+    //   div.style.top = `${a}%`
+    // }
+    // if(e.keyCode == 37){
+    //   b -= 2;
+    //   div.style.left = `${b}%`
+    // }
+    // if(e.keyCode == 39){
+    //   b +=2;
+    //   div.style.left = `${b}%`
+    // }
+    // console.log(e.keyCode)  
+    // }
+    
+
+
+    let body_ = document.body;
+      let a = 0;
+      let b = 0;
+
+    body_.onkeydown = (e) => {
+    
+    if(e.keyCode == 38){ 
+      a += 1;
+      div.style.borderTopRightRadius= `${a}%`
+    }
+    if(e.keyCode == 40){
+      a += 1;
+      div.style.borderBottomRightRadius = `${a}%`
+    }
+    if(e.keyCode == 37){
+      b += 1;
+      div.style.borderTopLeftRadius = `${b}%`
+    }
+    if(e.keyCode == 39){
+      b +=1;
+      div.style.borderBottomLeftRadius = `${b}%`
+    }
+    console.log(e.keyCode)  
+    }
+    
+
+    
+  </script>
+</body>
+</html>

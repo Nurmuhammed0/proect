@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>saat</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg">
+  <div class="container">
+  <div id="div1" class="saat">00</div>
+  <div  class="hh">:</div>
+  <div id="div2" class="minut">00</div>
+</div>
+
+<script type="text/javascript">
+  let div1 = document.getElementById('div1')
+  let div2 = document.getElementById('div2')
+ 
+  let f = 0;
+  let g = 0;
+
+  let a = true;
+  let ss = '';
+
+  document.body.onkeyup = (e)=>{
+    if(e.keyCode===32 && a){
+      a = !a;
+      ss = setInterval(()=>{
+        document.body.style.backgroundColor = "green"
+        g++;
+        div1.innerHTML = g>9? g:"0"+g;
+
+        if(g==60){
+          g=0;
+          f++
+          div2.innerHTML = f>9? f: "0"+f
+        }
+      },100);
+
+    }else if(e.keyCode==32 && !a){
+      clearInterval(ss)
+      a=!a;
+    }
+  }
+</script>
+</body>
+</html>

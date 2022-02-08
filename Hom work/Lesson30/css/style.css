@@ -1,0 +1,30 @@
+.bg{
+  background-color: red;
+}
+.container{
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: solid 5px #fff;
+  border-radius: 300px;
+  left: 45%;
+  /* margin-top: 40%; */
+}
+.saat{
+  position: absolute;
+  font-size: 50px;
+  left: 55%;
+  top: 40%;
+}
+.hh{
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 39%;
+}
+.minut{
+  position: absolute;
+  font-size: 50px;
+  left: 33%;
+  top: 40%;
+}

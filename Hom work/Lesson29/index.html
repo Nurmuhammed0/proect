@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .ff{
+      font-size: 30px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div align = "center" > <input id="nam" type="text" placeholder="Name" class="ff"> </div>
+  <div align = "center" >
+  <input id="input" type="text" placeholder="" class="ff">
+  <input id="inp" type="text" class="ff">
+  <button id="btn" class="ff">OK</button>
+  </div>
+  <div id="div"></div>
+  <script type="text/javascript">
+
+let Telefon = [
+   {
+    name: 'Samsung',
+    text: 'Samsung text',
+    price: '30000',
+   },
+   {
+    name: 'Nokia',
+    text: 'Nokia text',
+    price: '25000',
+   },
+   {
+    name: 'Honor',
+    text: 'Honor text',
+    price: '35000',
+   },
+   {
+     name: 'Redmi',
+     text: 'Redmi text',
+     price: '20000',
+   },
+   {
+    name: 'Mi',
+    text: 'Mi text',
+    price: '15000',
+   },
+   {
+    name: 'Phone',
+    text: 'Phone text',
+    price: '10000'
+   },
+   {
+    name: 'Phone',
+    text: 'Phone text',
+    price: '50000'
+   },
+  ]
+
+ let nam = document.getElementById('nam')
+ let div = document.getElementById('div');
+ let input = document.getElementById('input')
+ let inp = document.getElementById('inp')
+ let btn = document.getElementById('btn')                                       
+
+ btn.onclick = () =>{
+  let nn = nam.value
+  let vv = input.value
+  let pp = inp.value
+
+  input.value=''
+  inp.value = ''
+  nam.value = ''
+
+  Telefon.map(r => {
+ 
+      if ((vv<=r.price && pp >= r.price && nn==r.name) && vv.length > 0) {
+        
+          div.innerHTML +=
+            `<div>
+            <div>1: ${r.name}</div>
+            <div>2: ${r.text}</div>
+            <div>3: ${r.price} </div>
+            </div>`
+         
+      } 
+    })
+    }
+
+  </script>
+</body>
+</html>

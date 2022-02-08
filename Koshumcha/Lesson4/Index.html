@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <input type="text" id="inp">
+  <input type="text" id="input">
+  <button id="btn">Ok</button>
+  <div id="div"></div> -->
+
+  <input type="number" id="inp">
+  <input type="number" id="input">
+  <button id="btn">ok</button>
+  <div id="div"></div>
+
+  <script type="text/javascript">
+    // let inp = document.getElementById('inp')
+    // let input = document.getElementById('input')
+    // let btn = document.getElementById('btn')
+    // let div = document.getElementById('div')
+    // let aa = 0
+    // let bb = []
+
+    
+    // input.oninput = (event)=>{
+    //   aa=event.target.value;
+    //   bb.push(a);
+    //   // div.innerHTML='';
+    // }
+
+  //   btn.onclick = ()=>{
+  //     inp.value = ''
+  //     input.value = ''
+  //   bb.map((a,b) =>{
+  //     div.innerHTML =bb[ `<span>${a,b}</span>`]
+  //   })
+  // }
+
+    let inp = document.getElementById('inp')
+    let input=document.getElementById('input')
+    let btn =document.getElementById('btn')
+    let div =document.getElementById('div')
+    let a = 0
+    let b = []
+    
+    input.oninput = (event)=>{
+      a=event.target.value;
+      b.push(a);
+      div.innerText='';
+    }
+    inp.oninput = (event)=>{
+      a=event.target.value;
+      b.push(a);
+      div.innerText='';
+    }
+    btn.onclick = () =>{
+      input.value='';
+      inp.value = '';
+      b.map((h,g)=>{
+        div.innerHTML = `<span> ${g} ${h}</span>`
+        
+      })
+    }
+  </script>
+</body>
+</html>

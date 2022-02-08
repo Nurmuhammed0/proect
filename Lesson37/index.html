@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body align="center">
+  <div class="container">
+  <div id="div1" >00</div>
+  <div  >:</div>
+  <div id="div3">00</div>
+  </div>
+ 
+  <button onclick="stop()">Stop</button>
+  <button id="btn">Push</button>
+  <button id="format">Format</button>
+  <p id="div4" style="font-size: 50px">0 com</p>
+
+
+  <script type="text/javascript">
+    let div1 = document.getElementById('div1')
+    // let divText = document.getElementById('div1').value
+    let div3 = document.getElementById('div3')
+    // let div = document.getElementById('div3').value
+    let div4 = document.getElementById('div4')
+    let format = document.getElementById('format')
+
+    let f = 0;
+    let g = 0;
+    let v = 0;
+
+    let a = true;
+    let s = '';
+  
+
+    btn.onclick=function (e){
+      s = setInterval (() =>{
+       
+        g++;
+        div3.innerHTML = g > 9? g : "0"+g;
+
+        if(g==60){
+        g = 0;
+        f++
+        div1.innerHTML = f > 9? f : "0"+f;
+        v+=50;
+        div4.innerHTML = v>9? v : "0"+v+"com";
+        }
+
+      }, 100)
+    }
+    function format(e){ 
+      //  g++;
+       div3.innerHTML = g > 0? g : "0"+g;
+
+       if(g==0){
+       g == 0;
+      //  f++
+       div1.innerHTML = f > 0? f : "0"+f;
+       v=00;
+       div4.innerHTML = v>0? v : "0"+v+"com";
+       }
+
+     }
+    
+  
+function stop(){
+  clearInterval(s)
+}
+ 
+ 
+  </script>
+</body>
+</html>

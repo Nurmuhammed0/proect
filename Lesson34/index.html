@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input id="input" type="text">
+  <input id="inp" type="text">
+  <button id="btn">OK</button>
+  <div id="div"></div>
+  <script type="text/javascript">
+//     let Telefon = [
+//    {
+//     name: 'Samsung',
+//     text: 'Samsung text',
+//     price: '30000',
+//    },
+//    {
+//     name: 'Nokia',
+//     text: 'Nokia text',
+//     price: '25000',
+//    },
+//    {
+//     name: 'Honor',
+//     text: 'Honor text',
+//     price: '35000',
+//    },
+
+//   ]
+
+//  let div = document.getElementById('div');
+//  let input = document.getElementById('input')
+//  let btn = document.getElementById('btn')
+
+//  btn.onclick = () =>{
+//   let vv = input.value
+//   input.value=''
+//   Telefon.map(r => {
+ 
+//       if (r.name.includes(vv) && vv.length > 0) {
+        
+//         div.innerHTML +=
+//           `<div>
+//           <div>1: ${r.name}</div>
+//           <div>2: ${r.text}</div>
+//           <div>3: ${r.price} </div>
+//           </div>`
+//       }
+//     })
+//     }
+
+let Telefon = [
+   {
+    name: 'Samsung',
+    text: 'Samsung text',
+    price: '30000',
+   },
+   {
+    name: 'Nokia',
+    text: 'Nokia text',
+    price: '25000',
+   },
+   {
+    name: 'Honor',
+    text: 'Honor text',
+    price: '35000',
+   },
+
+  ]
+
+ let div = document.getElementById('div');
+ let input = document.getElementById('input')
+ let inp = document.getElementById('inp')
+ let btn = document.getElementById('btn')                                       
+
+ btn.onclick = () =>{
+  let vv = input.value
+  let pp = inp.value
+  input.value=''
+  inp.value = ''
+  Telefon.map(r => {
+ 
+      if ((vv<=r.price && pp >= r.price) && vv.length > 0) {
+        
+        div.innerHTML +=
+          `<div>
+          <div>1: ${r.name}</div>
+          <div>2: ${r.text}</div>
+          <div>3: ${r.price} </div>
+          </div>`
+      }
+      
+    })
+    }
+
+
+
+
+  </script>
+</body>
+</html>
